@@ -126,7 +126,7 @@ class Main extends Component {
 							</div>
 						</Fade>
 						<Fade bottom>
-							<div className="img_block">
+							{/* <div className="img_block">
 								<div className="header-title">
 									<a
 										className="header-title"
@@ -168,7 +168,7 @@ class Main extends Component {
 									</div>
 								</div>
 							</div>
-							{/* </div> */}
+							</div> */}
 						</Fade>{" "}
 						<Fade bottom>
 							<div className="img_block">
