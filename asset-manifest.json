@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/StephenSenft21.github.io/static/css/main.6c3eee0b.chunk.css",
+    "main.js": "/StephenSenft21.github.io/static/js/main.0fd304fa.chunk.js",
+    "main.js.map": "/StephenSenft21.github.io/static/js/main.0fd304fa.chunk.js.map",
+    "runtime-main.js": "/StephenSenft21.github.io/static/js/runtime-main.d5d2fb1d.js",
+    "runtime-main.js.map": "/StephenSenft21.github.io/static/js/runtime-main.d5d2fb1d.js.map",
+    "static/css/2.de424728.chunk.css": "/StephenSenft21.github.io/static/css/2.de424728.chunk.css",
+    "static/js/2.ca3c4a02.chunk.js": "/StephenSenft21.github.io/static/js/2.ca3c4a02.chunk.js",
+    "static/js/2.ca3c4a02.chunk.js.map": "/StephenSenft21.github.io/static/js/2.ca3c4a02.chunk.js.map",
+    "index.html": "/StephenSenft21.github.io/index.html",
+    "precache-manifest.b120f329a1c11bd23beb33e78fccde2c.js": "/StephenSenft21.github.io/precache-manifest.b120f329a1c11bd23beb33e78fccde2c.js",
+    "service-worker.js": "/StephenSenft21.github.io/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/StephenSenft21.github.io/static/css/2.de424728.chunk.css.map",
+    "static/css/main.6c3eee0b.chunk.css.map": "/StephenSenft21.github.io/static/css/main.6c3eee0b.chunk.css.map",
+    "static/js/2.ca3c4a02.chunk.js.LICENSE.txt": "/StephenSenft21.github.io/static/js/2.ca3c4a02.chunk.js.LICENSE.txt",
+    "static/media/BangazonDashboard.png": "/StephenSenft21.github.io/static/media/BangazonDashboard.8e0675f7.png",
+    "static/media/BangazonFigma.png": "/StephenSenft21.github.io/static/media/BangazonFigma.52ab038b.png",
+    "static/media/Casaasa.png": "/StephenSenft21.github.io/static/media/Casaasa.f5620f05.png",
+    "static/media/Employee1.png": "/StephenSenft21.github.io/static/media/Employee1.01da8591.png",
+    "static/media/First (4).png": "/StephenSenft21.github.io/static/media/First (4).900b3149.png",
+    "static/media/Sidekick.png": "/StephenSenft21.github.io/static/media/Sidekick.c465f1a1.png",
+    "static/media/SnowBoardProfile.jpg": "/StephenSenft21.github.io/static/media/SnowBoardProfile.0866140e.jpg",
+    "static/media/StephenSenftResume.pdf": "/StephenSenft21.github.io/static/media/StephenSenftResume.f8bc3705.pdf",
+    "static/media/addComputer.png": "/StephenSenft21.github.io/static/media/addComputer.20cd33d1.png",
+    "static/media/journeyMapping.jpg": "/StephenSenft21.github.io/static/media/journeyMapping.204c101a.jpg",
+    "static/media/lofi_2.gif": "/StephenSenft21.github.io/static/media/lofi_2.f41549bf.gif",
+    "static/media/logo.png": "/StephenSenft21.github.io/static/media/logo.4c6cc490.png",
+    "static/media/mapping.jpg": "/StephenSenft21.github.io/static/media/mapping.92740d86.jpg",
+    "static/media/me2.jpg": "/StephenSenft21.github.io/static/media/me2.61e696bf.jpg",
+    "static/media/research.jpg": "/StephenSenft21.github.io/static/media/research.9133ede7.jpg",
+    "static/media/website35.png": "/StephenSenft21.github.io/static/media/website35.8a2cc1cb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5d2fb1d.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.ca3c4a02.chunk.js",
+    "static/css/main.6c3eee0b.chunk.css",
+    "static/js/main.0fd304fa.chunk.js"
+  ]
+}
