@@ -20,63 +20,63 @@ export default {
 	aboutImage: Stephen,
 	ShowAboutImage: true,
 
-	intro: "Below is a collection of personal and team collaborated projects that I have worked on during my short time as a software developer.",
+	intro: "Below is a collection of my personal and team collaborated projects that I have worked on during my short time as a software developer.",
 
 	copyWright: "Copyright © 2020 Stephen Senft",
-	projects: [{
-			id: 1,
-			title: "", //Project Title - Add Your Project Title Here
-			service: "", // Add Your Service Type Here
-			//Project Image - Add Your Project Image Here
-			imageSrc: ""
-			//Project URL - Add Your Project Url Here
-		},
-		{
-			id: 2,
-			title: "",
-			service: "",
-			imageSrc: ""
-		},
-		{
-			id: 3,
-			title: "",
-			service: "",
-			imageSrc: ""
+	// projects: [{
+	// 		id: 1,
+	// 		title: "", //Project Title - Add Your Project Title Here
+	// 		service: "", // Add Your Service Type Here
+	// 		//Project Image - Add Your Project Image Here
+	// 		imageSrc: ""
+	// 		//Project URL - Add Your Project Url Here
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
 
-		},
-		{
-			id: 4,
-			title: "",
-			service: "",
-			imageSrc: ""
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
 		
-		},
-		{
-			id: 5,
-			title: "",
-			service: "",
-			imageSrc: ""
+	// 	},
+	// 	{
+	// 		id: 5,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
 			
-		},
-		{
-			id: 6,
-			title: "",
-			service: "",
-			imageSrc: ""
-		},
-		{
-			id: 7,
-			title: "",
-			service: "",
-			imageSrc: ""
-		},
-		{
-			id: 8,
-			title: "",
-			service: "",
-			imageSrc: ""
-		}
-	],
+	// 	},
+	// 	{
+	// 		id: 6,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
+	// 	},
+	// 	{
+	// 		id: 7,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
+	// 	},
+	// 	{
+	// 		id: 8,
+	// 		title: "",
+	// 		service: "",
+	// 		imageSrc: ""
+	// 	}
+	// ],
 
 	social: [
 		{
