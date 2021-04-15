@@ -5,7 +5,6 @@ import Home from "./components/Home";
 
 export default class ApplicationViews extends Component {
 	render() {
-		console.log("from app js", this.props);
 		return (
 			<>
 				<Route
