@@ -18,7 +18,7 @@
 	"private": true,
 	"dependencies": {
 		"framer": "^1.2.5",
-		"framer-motion": "^2.3.0",
+		"framer-motion": "^2.0.0 ",
 		"bootstrap": "^4.4.1",
 		"fund": "^1.0.0",
 		"react": "^16.8.6",

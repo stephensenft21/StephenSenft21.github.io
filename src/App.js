@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import ApplicationViews from "../src/ApplicationViews";
 
-function App() {
+function App(props) {
 
 	const [loading, setloading] = useState(true);
 	const [repos, setRepos] = useState([{}])
@@ -11,7 +11,7 @@ function App() {
 	useEffect(() => {
 		let mounted = true;
 
-		fetch("https://api.github.com/users/StephenSenft21/repos?per_page=10")
+		fetch("https://api.github.com/users/StephenSenft21/repos?sort=date-desc&page=1&per_page=20")
 			.then(res => res.json())
 			.then((data) => {
 				if (mounted) {

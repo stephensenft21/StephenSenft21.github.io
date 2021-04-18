@@ -1,8 +1,6 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClone } from '@fortawesome/free-solid-svg-icons';
 import {motion} from 'framer-motion';
-export const RepoTable = ({repos}) => {
+export const RepoTable = (props) => {
     
     const toShortDate = (date) => {
         var d = new Date(date)
@@ -18,7 +16,7 @@ export const RepoTable = ({repos}) => {
     const dateCompare = (a, b) => {
         return new Date(b.created_at) - new Date(a.created_at);
     }
-
+console.log(props.repos,"this is coming from repo table")
     return (
         <div id="repoTableContainer"
             style={{ marginTop: '85px', height: '500px', overflowY: 'scroll' }}>
@@ -29,16 +27,15 @@ export const RepoTable = ({repos}) => {
                         <th>Id</th>
                         <th>Created</th>
                         <th>Name</th>
-                        <th>Clone</th>
                     </tr>
                 </thead>
                 <tbody>
 
                     {
-                        repos.sort(dateCompare).map((repo, idx) => {
+                        props.repos.map((repo, idx) => {
                             return (
                                 <motion.tr key={idx}>
-                                    <td>{idx}</td>
+                                    <td>{idx}.</td>
                                     <td>{toShortDate(repo.created_at)}</td>
                                     <td>
                                         <a target="_blank" rel="noopener noreferrer" href={repo.html_url}>
@@ -46,7 +43,7 @@ export const RepoTable = ({repos}) => {
                                         </a>
                                     </td>
                                     <td>
-                                        <FontAwesomeIcon icon={faClone} />
+                                        
                                     </td>
                                 </motion.tr>)
                         })

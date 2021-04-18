@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Header from "./Header";
+import { Container, Row, Col } from 'react-bootstrap';
+import { pageTransition, pageVariants } from './animations/animations';
+import { motion, AnimatePresence } from 'framer-motion';
 import Fade from "react-reveal/Fade";
+import { RepoTable } from './RepoTable'
 import data from "../Data";
-import {TherapyApplication} from './projects/NOCD'
+import { TherapyApplication } from './projects/NOCD'
 class Main extends Component {
 	state = {};
 	render() {
@@ -15,15 +19,15 @@ class Main extends Component {
 							<Fade bottom cascade>
 								About.
 							</Fade>
-							
+
 						</h1>
 
 						<Fade bottom>
 							<div className="img">
-							<div className="abouttext">
-								<p>{data.abouttext}</p>
-								<p>{data.abouttext2}</p>
-							</div>
+								<div className="abouttext">
+									<p>{data.abouttext}</p>
+									<p>{data.abouttext2}</p>
+								</div>
 								<img
 									src={require("../images/SnowBoardProfile.jpg")}
 									className="picture"
@@ -47,9 +51,9 @@ class Main extends Component {
 						</Fade>
 					</div>
 					<div className="allProjects">
-					
+
 						<Fade bottom>
-							<TherapyApplication/>
+							<TherapyApplication />
 						</Fade>
 						<Fade bottom>
 							<div className="img_block">
@@ -100,14 +104,14 @@ class Main extends Component {
 											className="img_link"
 											alt="Sidekick"
 										/>
-									</a>  
+									</a>
 									<h5 className="prototype-disclaimer">(Prototype designed by our UI/UX team)</h5><br></br>
 									<h2 className="date">Bangazon Workforce</h2>
 									<h2 className="blurb">
-								    Bangozon Workforce is a full-stack application that myself and three others built using ADO.net, MVC, SQL server, Bootstrap, 
-									CSS. This application solved a problem allowing HR to on-board new employees. 
-									show employee information, assign a computer to employee and 
-									assign training programs to the employee if necessary.
+										Bangozon Workforce is a full-stack application that myself and three others built using ADO.net, MVC, SQL server, Bootstrap,
+										CSS. This application solved a problem allowing HR to on-board new employees.
+										show employee information, assign a computer to employee and
+										assign training programs to the employee if necessary.
 									</h2>
 									<div className="buttonDiv">
 										<a
@@ -141,7 +145,7 @@ class Main extends Component {
 									</a>
 									<h2 className="date">Cohort 35 Website</h2>
 									<h2 className="blurb">
-								My Classmates
+										My Classmates
 									</h2>
 									<div className="buttonDiv">
 										<a
@@ -157,6 +161,28 @@ class Main extends Component {
 									</div>
 								</div>
 							</div>
+							<Container fluid>
+								<motion.div
+									initial="initial"
+									animate="in"
+									exit="out"
+									variants={pageVariants}
+									transition={pageTransition}>
+
+									<Row className="justify-content-center">
+										<Col lg={10} className="p-0">
+											<div id="workGrid">
+											</div>
+											<h1>Github Repositories</h1>
+											<motion.hr style={{ border: '1px solid #47748b' }}
+												initial={{ width: 0, marginRight: '100%' }}
+												animate={{ width: '100%', marginRight: "0px", transition: { duration: 0.6 } }} />
+											<RepoTable repos={this.props.repos} />
+										</Col>
+									</Row>
+								</motion.div>
+
+							</Container>
 						</Fade>
 					</div>
 				</div>

@@ -10,7 +10,7 @@ class Home extends Component {
 			<>
 
 					<Navbar />
-					<Main />
+					<Main repos={this.props.repos} />
 					<Contact />
 
 			</>
