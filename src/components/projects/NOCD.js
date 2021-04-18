@@ -37,5 +37,6 @@ export const TherapyApplication = (props) => {
             </div>
 
         </>
+        
     )
 }

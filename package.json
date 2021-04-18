@@ -17,6 +17,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"framer": "^1.2.5",
+		"framer-motion": "^2.3.0",
 		"bootstrap": "^4.4.1",
 		"fund": "^1.0.0",
 		"react": "^16.8.6",
@@ -28,7 +30,6 @@
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "^3.3.1",
 		"react-scroll": "^1.7.12",
-		"semantic-ui": "^2.4.2",
 		"semantic-ui-react": "^0.88.2",
 		"start": "^5.1.0"
 	},
