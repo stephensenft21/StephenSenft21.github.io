@@ -54,6 +54,19 @@ class Navbar extends Component {
 						<Link
 							className="link"
 							activeClass="active"
+							to="repos"
+							spy={true}
+							smooth={true}
+							offset={-70}
+							duration={500}
+						>
+							Repos
+						</Link>
+					</li>
+					<li>
+						<Link
+							className="link"
+							activeClass="active"
 							to="contact"
 							spy={true}
 							smooth={true}

@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import Header from "./Header";
+import { Container, Row, Col } from 'react-bootstrap';
+import { pageTransition, pageVariants } from './animations/animations';
+import { motion, AnimatePresence } from 'framer-motion';
 import Fade from "react-reveal/Fade";
+import { RepoTable } from './table/RepoTable'
 import data from "../Data";
-import {TherapyApplication} from './projects/NOCD'
+import { TherapyApplication } from './projects/NOCD'
+import {FirstCake} from './projects/FirstCake'
 class Main extends Component {
 	state = {};
 	render() {
@@ -15,15 +20,15 @@ class Main extends Component {
 							<Fade bottom cascade>
 								About.
 							</Fade>
-							
+
 						</h1>
 
 						<Fade bottom>
 							<div className="img">
-							<div className="abouttext">
-								<p>{data.abouttext}</p>
-								<p>{data.abouttext2}</p>
-							</div>
+								<div className="abouttext">
+									<p>{data.abouttext}</p>
+									<p>{data.abouttext2}</p>
+								</div>
 								<img
 									src={require("../images/SnowBoardProfile.jpg")}
 									className="picture"
@@ -47,44 +52,15 @@ class Main extends Component {
 						</Fade>
 					</div>
 					<div className="allProjects">
-					
+
 						<Fade bottom>
-							<TherapyApplication/>
+							<TherapyApplication />
 						</Fade>
 						<Fade bottom>
-							<div className="img_block">
-								<div className="header-title">
-									<a
-										className="header-title"
-										href={require("../images/First (4).png")}
-										rel="noopener noreferrer"
-										target="_blank"
-									>
-										<img
-											src={require("../images/First (4).png")}
-											className="img_link First_Cake"
-											alt="First Cake"
-										/>
-									</a>
-									<h2 className="date">First Cake</h2>
-									<h3 className="blurb">React-based mobile first single page application that helps users find casual date spots in the Nashville area. Uses Zomato's API for persistant data.  Users are able to save favorite locations, add comments with full-CRUD functionality and delete favorite locations. Implemented functional components using some React Hooks to effect the state of the views.
-								</h3>
-									<div className="buttonDiv">
-										<a
-											className="header-title"
-											href="https://github.com/stephensenft21/First-Cake"
-											rel="noopener noreferrer"
-											target="_blank"
-										>
-											<button className=" header-title">
-												View Project
-											</button>
-										</a>
-									</div>
-								</div>
-							</div>
+							
 						</Fade>
 						<Fade bottom>
+							<FirstCake/>
 						</Fade>{" "}
 						<Fade bottom>
 							<div className="img_block">
@@ -100,14 +76,14 @@ class Main extends Component {
 											className="img_link"
 											alt="Sidekick"
 										/>
-									</a>  
+									</a>
 									<h5 className="prototype-disclaimer">(Prototype designed by our UI/UX team)</h5><br></br>
 									<h2 className="date">Bangazon Workforce</h2>
 									<h2 className="blurb">
-								    Bangozon Workforce is a full-stack application that myself and three others built using ADO.net, MVC, SQL server, Bootstrap, 
-									CSS. This application solved a problem allowing HR to on-board new employees. 
-									show employee information, assign a computer to employee and 
-									assign training programs to the employee if necessary.
+										Bangozon Workforce is a full-stack application that myself and three others built using ADO.net, MVC, SQL server, Bootstrap,
+										CSS. This application solved a problem allowing HR to on-board new employees.
+										show employee information, assign a computer to employee and
+										assign training programs to the employee if necessary.
 									</h2>
 									<div className="buttonDiv">
 										<a
@@ -141,7 +117,7 @@ class Main extends Component {
 									</a>
 									<h2 className="date">Cohort 35 Website</h2>
 									<h2 className="blurb">
-								My Classmates
+										My Classmates
 									</h2>
 									<div className="buttonDiv">
 										<a
@@ -157,8 +133,32 @@ class Main extends Component {
 									</div>
 								</div>
 							</div>
+					
 						</Fade>
 					</div>
+						<div className="repos">
+						<Fade bottom>
+						<Container fluid>
+								<motion.div
+									initial="initial"
+									animate="in"
+									exit="out"
+									variants={pageVariants}
+									transition={pageTransition}>
+									<Row className="justify-content-center">
+										<Col lg={10} className="p-0">
+											<div id="workGrid">
+											<h1>Github Repositories</h1>
+											<hr style={{ border: '1px solid black' }}
+												initial={{ width: 0, marginRight: '100%' }} />
+											<RepoTable repos={this.props.repos} />
+												</div>
+										</Col>
+									</Row>
+								</motion.div>
+							</Container>
+							</Fade>
+							</div>
 				</div>
 			</div>
 		);

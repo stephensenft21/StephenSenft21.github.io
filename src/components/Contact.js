@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import data from "../Data";
+import { Container, Row, Col } from 'react-bootstrap';
+import { pageTransition, pageVariants } from './animations/animations';
+import { motion, AnimatePresence } from 'framer-motion';
+import { RepoTable } from './table/RepoTable'
+
 
 class Contact extends Component {
 	state = {};
@@ -38,10 +43,11 @@ class Contact extends Component {
 									</a>
 								</li>
 							))}
+							
 						</ul>
+						
 					</div>
 				</Fade>
-
 				<span className="footer">
 					{" "}
 							<p className="footer">{data.copyWright}</p>
