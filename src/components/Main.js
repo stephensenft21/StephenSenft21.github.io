@@ -4,9 +4,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { pageTransition, pageVariants } from './animations/animations';
 import { motion, AnimatePresence } from 'framer-motion';
 import Fade from "react-reveal/Fade";
-import { RepoTable } from './RepoTable'
+import { RepoTable } from './table/RepoTable'
 import data from "../Data";
 import { TherapyApplication } from './projects/NOCD'
+import {FirstCake} from './projects/FirstCake'
 class Main extends Component {
 	state = {};
 	render() {
@@ -56,39 +57,10 @@ class Main extends Component {
 							<TherapyApplication />
 						</Fade>
 						<Fade bottom>
-							<div className="img_block">
-								<div className="header-title">
-									<a
-										className="header-title"
-										href={require("../images/First (4).png")}
-										rel="noopener noreferrer"
-										target="_blank"
-									>
-										<img
-											src={require("../images/First (4).png")}
-											className="img_link First_Cake"
-											alt="First Cake"
-										/>
-									</a>
-									<h2 className="date">First Cake</h2>
-									<h3 className="blurb">React-based mobile first single page application that helps users find casual date spots in the Nashville area. Uses Zomato's API for persistant data.  Users are able to save favorite locations, add comments with full-CRUD functionality and delete favorite locations. Implemented functional components using some React Hooks to effect the state of the views.
-								</h3>
-									<div className="buttonDiv">
-										<a
-											className="header-title"
-											href="https://github.com/stephensenft21/First-Cake"
-											rel="noopener noreferrer"
-											target="_blank"
-										>
-											<button className=" header-title">
-												View Project
-											</button>
-										</a>
-									</div>
-								</div>
-							</div>
+							
 						</Fade>
 						<Fade bottom>
+							<FirstCake/>
 						</Fade>{" "}
 						<Fade bottom>
 							<div className="img_block">
@@ -161,30 +133,32 @@ class Main extends Component {
 									</div>
 								</div>
 							</div>
-							<Container fluid>
+					
+						</Fade>
+					</div>
+						<div className="repos">
+						<Fade bottom>
+						<Container fluid>
 								<motion.div
 									initial="initial"
 									animate="in"
 									exit="out"
 									variants={pageVariants}
 									transition={pageTransition}>
-
 									<Row className="justify-content-center">
 										<Col lg={10} className="p-0">
 											<div id="workGrid">
-											</div>
 											<h1>Github Repositories</h1>
-											<motion.hr style={{ border: '1px solid #47748b' }}
-												initial={{ width: 0, marginRight: '100%' }}
-												animate={{ width: '100%', marginRight: "0px", transition: { duration: 0.6 } }} />
+											<hr style={{ border: '1px solid black' }}
+												initial={{ width: 0, marginRight: '100%' }} />
 											<RepoTable repos={this.props.repos} />
+												</div>
 										</Col>
 									</Row>
 								</motion.div>
-
 							</Container>
-						</Fade>
-					</div>
+							</Fade>
+							</div>
 				</div>
 			</div>
 		);

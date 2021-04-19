@@ -28,7 +28,7 @@ export const TherapyApplication = (props) => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <button className=" header-title">
+                            <button className="header-title">
                                 View Project
 											</button>
                         </a>
