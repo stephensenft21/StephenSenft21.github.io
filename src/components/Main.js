@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 import data from "../Data";
 import { TherapyApplication } from './projects/NOCD'
 import { FirstCake } from './projects/FirstCake'
+import { Profile } from './Profile'
 class Main extends Component {
 	state = {};
 	render() {
@@ -19,17 +20,7 @@ class Main extends Component {
 							</Fade>
 						</h1>
 						<Fade bottom>
-							<div className="img">
-								<div className="abouttext">
-									<p>{data.abouttext}</p>
-									<p>{data.abouttext2}</p>
-								</div>
-								<img
-									src={require("../images/SnowBoardProfile.jpg")}
-									className="picture"
-									alt="Stephen Senft"
-								/>
-							</div>
+							<Profile data={data} />
 						</Fade>
 					</div>
 				</div>
