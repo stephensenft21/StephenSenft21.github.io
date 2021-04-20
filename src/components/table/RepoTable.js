@@ -1,23 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import {toShortDate} from '../../helpers/dataHelper'
 import './table.css'
 export const RepoTable = (props) => {
 
-    const toShortDate = (date) => {
-        var d = new Date(date)
-
-        let month = d.getMonth();
-        month = (month + 1).toString();
-
-        let year = d.getFullYear().toString().substr(-2);
-        return `${month}/${year}`
-
-    }
-
-    const dateCompare = (a, b) => {
-        return new Date(b.created_at) - new Date(a.created_at);
-    }
-    console.log(props.repos, "this is coming from repo table")
     return (
         <>
             <thead>
@@ -27,7 +13,6 @@ export const RepoTable = (props) => {
                     <th>Name</th>
                     <th>Language</th>
                     <th>Last Updated</th>
-            
                 </tr>
             </thead>
         <div id="repoTableContainer" className="table--container"

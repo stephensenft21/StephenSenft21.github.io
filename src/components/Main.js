@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import { Container, Row, Col } from 'react-bootstrap';
-import { pageTransition, pageVariants } from './animations/animations';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Repo } from './Repo'
 import Fade from "react-reveal/Fade";
-import { RepoTable } from './table/RepoTable'
 import data from "../Data";
 import { TherapyApplication } from './projects/NOCD'
-import {FirstCake} from './projects/FirstCake'
+import { FirstCake } from './projects/FirstCake'
+import { Profile } from './Profile'
 class Main extends Component {
 	state = {};
 	render() {
@@ -20,21 +18,9 @@ class Main extends Component {
 							<Fade bottom cascade>
 								About.
 							</Fade>
-
 						</h1>
-
 						<Fade bottom>
-							<div className="img">
-								<div className="abouttext">
-									<p>{data.abouttext}</p>
-									<p>{data.abouttext2}</p>
-								</div>
-								<img
-									src={require("../images/SnowBoardProfile.jpg")}
-									className="picture"
-									alt="Stephen Senft"
-								/>
-							</div>
+							<Profile data={data} />
 						</Fade>
 					</div>
 				</div>
@@ -57,10 +43,10 @@ class Main extends Component {
 							<TherapyApplication />
 						</Fade>
 						<Fade bottom>
-							
+
 						</Fade>
 						<Fade bottom>
-							<FirstCake/>
+							<FirstCake />
 						</Fade>{" "}
 						<Fade bottom>
 							<div className="img_block">
@@ -133,32 +119,14 @@ class Main extends Component {
 									</div>
 								</div>
 							</div>
-					
+
 						</Fade>
 					</div>
-						<div className="repos">
-						<Fade bottom>
-						<Container fluid>
-								<motion.div
-									initial="initial"
-									animate="in"
-									exit="out"
-									variants={pageVariants}
-									transition={pageTransition}>
-									<Row className="justify-content-center">
-										<Col lg={10} className="p-0">
-											<div id="workGrid">
-											<h1>Github Repositories</h1>
-											<hr style={{ border: '1px solid black' }}
-												initial={{ width: 0, marginRight: '100%' }} />
-											<RepoTable repos={this.props.repos} />
-												</div>
-										</Col>
-									</Row>
-								</motion.div>
-							</Container>
-							</Fade>
-							</div>
+					<div className="repos">
+						<Fade bottom cascade>
+							<Repo repos={this.props.repos} />
+						</Fade>
+					</div>
 				</div>
 			</div>
 		);

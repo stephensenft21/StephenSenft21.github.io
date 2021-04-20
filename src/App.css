@@ -78,7 +78,6 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   color: black;
   text-decoration: none;
-  
 }
 
 /* ________________________________ */
@@ -86,12 +85,14 @@ h2 {
 nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center !important;
   background-color: #5dd39e;
-  padding-top: 1em;
+  padding-top: .1em;
   top: 0;
   width: 100%;
   position: sticky;
-  z-index: 9999
+  z-index: 9999;
+
 }
 
 nav li {
@@ -207,6 +208,8 @@ li .link:hover {
   display: flex;
   width: 38em;
   height: auto;
+  /* flex-direction: row;
+  justify-content: space-around; */
 }
 
 .header-title {
